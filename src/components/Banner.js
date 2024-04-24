@@ -52,33 +52,34 @@ export const Banner = () => {
     const handleConnectScroll = () => {
       const connectSection = document.getElementById('connect');
       connectSection.scrollIntoView({ behavior: 'smooth' });
-  };
+    };
 
-  return (
-      <section className="banner" id="home">
-          <Container>
-              <Row className="align-items-center">
-                  <Col xs={12} md={6} xl={7}>
-                      <div>
-                          <span className="tagline">Welcome to my Portfolio</span>
-                          <h1>{`Hello! I'm Carol,`} <span className="txt-rotate"><span className="wrap">{text}</span></span></h1>
-                          <p>
-                              I bridge imagination with innovation, pushing boundaries to redefine user interfaces.
-                              I thrive on curiosity, constantly evolving to shape the future of web experiences.
-                              As a frontend developer, I don't just write code; I create immersive digital landscapes,
-                              inviting users on unforgettable digital adventures.
-                          </p>
-                          <button onClick={handleConnectScroll}>Let’s Connect <ArrowRightCircle size={25} /></button>
-                      </div>
-                  </Col>
-                  <Col xs={12} md={6} xl={5}>
-                      <div className="lottie-animation">
-                          <Lottie
-                              animationData={animationData} />
-                      </div>
-                  </Col>
-              </Row>
-          </Container>
-      </section>
-  );
+    return (
+        <section className="banner" id="home">
+            <Container>
+                <Row className="align-items-center">
+                    <Col xs={12} md={6} xl={7}>
+                        <div>
+                            <span className="tagline">Welcome to my Portfolio</span>
+                            <h1>{`Hello! I'm Carol,`} <span className="txt-rotate"><span className="wrap">{text}</span></span></h1>
+                            <p>
+                                I bridge imagination with innovation, pushing boundaries to redefine user interfaces.
+                                I thrive on curiosity, constantly evolving to shape the future of web experiences.
+                                As a frontend developer, I don't just write code; I create immersive digital landscapes,
+                                inviting users on unforgettable digital adventures.
+                            </p>
+                            <button onClick={handleConnectScroll}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                        </div>
+                    </Col>
+                    <Col xs={12} md={6} xl={5}>
+                        <div className="lottie-animation">
+                            <Lottie
+                                animationData={animationData} />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+    );
 };
+
