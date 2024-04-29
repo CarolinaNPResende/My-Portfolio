@@ -5,11 +5,14 @@ import navIcon1 from '../assets/img/nav-icon1.png';
 import navIcon2 from '../assets/img/nav-icon2.png';
 import navIcon3 from '../assets/img/nav-icon3.png';
 import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 
 export const NavBar = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleToggle = () => {
+    setOpen(!open);
+  };
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
@@ -39,14 +42,16 @@ export const NavBar = () => {
           {/* <Navbar.Brand href="/">
             <img src={logo} alt="Logo" />
           </Navbar.Brand> */}
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className={open ? 'open' : ''} onClick={handleToggle}>
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" className={open ? 'open' : ''}>
             <Nav className="ms-auto">
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#testemonys" className={activeLink === 'testemonys' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('testemonys')}>Testemonials</Nav.Link>
+              <Nav.Link href="https://drive.google.com/file/d/1jTe7wjCCQsP3SMytBrptMuBRBEI9st4t/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={activeLink === 'resume' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('resume')}>Resume</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">

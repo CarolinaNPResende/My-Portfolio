@@ -1,7 +1,7 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 
-export const ProjectCard = ({ title, description, imgUrl, link }) => {
+export const ProjectCard = ({ title, hastags, description, imgUrl, link }) => {
   return (
     <Col size={12} sm={6} md={4}>
       <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
@@ -13,6 +13,7 @@ export const ProjectCard = ({ title, description, imgUrl, link }) => {
           </div>
         </div>
       </a>
+      <h6 className="proj-hastag">{hastags}</h6>
     </Col>
   );
 };

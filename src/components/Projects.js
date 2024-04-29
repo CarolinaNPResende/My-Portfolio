@@ -11,6 +11,7 @@ import projImg7 from "../assets/img/project-img7.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+
 export const Projects = () => {
     const [activeTab, setActiveTab] = useState("first");
   
@@ -19,25 +20,29 @@ export const Projects = () => {
         title: "Auchan Project",
         description: "Development",
         imgUrl: projImg2,
-        link: "https://github.com/CarolinaNPResende/Auchan-dev"
+        link: "https://github.com/CarolinaNPResende/Auchan-dev",
+        hastags:"#HTML #CSS #JavaScript #Salesforce #LightningWebComponents #Visualforce #React"
         },
         {
         title: "OMV Project",
         description: "Development",
         imgUrl: projImg3,
-        link: "https://github.com/CarolinaNPResende/OMV-Dev"
+        link: "https://github.com/CarolinaNPResende/OMV-Dev",
+        hastags:"#HTML #CSS #JavaScript #Salesforce #LightningWebComponents #Visualforce #React"
         },
         {
         title: "ATC Consulting Project",
         description: "Development",
         imgUrl: projImg4,
-        link: "https://github.com/CarolinaNPResende/ATC-Website"
+        link: "https://github.com/CarolinaNPResende/ATC-Website",
+        hastags:"#HTML #CSS #JavaScript #PHP"
         },
         {
         title: "Formassim Project",
         description: "Development",
         imgUrl: projImg5,
-        link: "https://github.com/CarolinaNPResende/Formassim-Website"
+        link: "https://github.com/CarolinaNPResende/Formassim-Website",
+        hastags:"#HTML #CSS #JavaScript #PHP"
         },
     ];
 
@@ -46,19 +51,22 @@ export const Projects = () => {
         title: "Recheio Project",
         description: "User Experience & User Interface Design",
         imgUrl: projImg1,
-        link: "https://www.figma.com/file/xy84tghiOewHR2bwBVuZy8/Untitled?type=design&mode=design&t=Rgx43PK3bF0UlfxX-1"
+        link: "https://www.figma.com/file/xy84tghiOewHR2bwBVuZy8/Untitled?type=design&mode=design&t=Rgx43PK3bF0UlfxX-1",
+        hastags:"#E-Commerce #Figma #UX #UI #Wireframes"
         },
         {
         title: "Web Summit Lisbon Prototype",
         description: "UX/UI Design",
         imgUrl: projImg6,
-        link: "https://www.behance.net/gallery/104716603/Web-Summit-Lisboa-Project-Mobile-APP-Development-%28UX%29"
+        link: "https://www.behance.net/gallery/104716603/Web-Summit-Lisboa-Project-Mobile-APP-Development-%28UX%29",
+        hastags:"#Mobile #Figma #UI #Wireframes"
         },
         {
         title: "Peça de Fruta Prototype",
         description: "UX/UI Design",
         imgUrl: projImg7,
-        link: "https://www.behance.net/gallery/89891611/Peca-de-Fruta-UX-UI-Desktop"
+        link: "https://www.behance.net/gallery/89891611/Peca-de-Fruta-UX-UI-Desktop",
+        hastags:"#Figma #UI #Wireframes"
         },
     ];
 
@@ -75,8 +83,8 @@ export const Projects = () => {
                 <TrackVisibility>
                   {({ isVisible }) => (
                     <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                      <h2>Embark on Digital Adventures</h2>
-                      <p>Welcome to my portfolio of digital prowess, where each project is a unique and thrilling journey. <br/>Explore, get inspired, and join me on this journey of digital discovery. <br/>Below are some of my most captivating and innovative creations:</p>
+                      <h2>Digital Adventures</h2>
+                      <p>Welcome to my portfolio, where each project is a unique journey. <br/>Explore some of my creations and join me on this journey of digital discovery:</p>
                       <Tab.Container id="projects-tabs" activeKey={activeTab} onSelect={handleTabSelect}>
                         <Nav variant="pills" className="nav-pills mb-5" id="pills-tab">
                           <Nav.Item>

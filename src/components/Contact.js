@@ -51,7 +51,7 @@ export const Contact = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div className={`animate__animated ${isVisible ? 'animate__fadeIn' : ''}`}>
-                  <h2 className="text-center">Let's Build Something Awesome!</h2>
+                  <h2 className="text-center">Let's Connect!</h2>
                   <form onSubmit={handleSubmit} className="w-100">
                     <div className="form-group">
                       <input

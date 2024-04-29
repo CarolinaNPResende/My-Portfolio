@@ -251,6 +251,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
+.navbar-toggler.open .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+  background-color: #249D9F;
+  height: 2px;
+}
+
+.navbar-toggler.open .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+  background-color: #249D9F;
+  height: 2px;
+}
+
+.navbar-toggler.open .navbar-toggler-icon {
+  border-color: transparent;
+}
 
 /************ Banner Css ************/
 .banner {
@@ -369,6 +384,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 0.875rem 3.75rem 0.875rem 3.75rem;
+  margin-bottom: -0.8rem;
 }
 
 .skill-slider {
@@ -401,11 +417,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 60%;
 }
 
-.skill-slider .item h6 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-top: -1rem; 
-  padding-bottom: 5rem;
+.skill-slider .item img {
+  -webkit-filter: grayscale(800%);
+  height: 8rem;
+  width: auto;
+  margin-top: -4rem;
+  margin-bottom: 4rem;
 }
 
 .skill-slider .item h5 {
@@ -414,16 +431,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
  }
 
  @media (max-width: 767px) {
-  .skill {
-    margin-top: 6.5rem;
-  }
   .skill p {
     width: 100%;
     margin-left: auto;
     font-size: 16px;
   }
   .skill-bx {
-    margin-top: 4rem;
+    margin-top: 9rem;
+  }
+  .skill-slider .item img {
+    height: 5rem;
+    margin-top: -2rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .skill {
+    margin-top: 7rem;
+  }
+  .skill-bx {
+      margin-top: 19rem;
+  }
+  .skill-slider .item img {
+    height: 5rem;
+    margin-top: -2rem;
+    width: auto;
 }
 }
 
@@ -532,6 +565,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.1em;
   color: white!important;
 }
+.proj-hastag {
+  font-weight: lighter;
+  font-size: 14;
+  margin-bottom: 3rem;
+  color: #249D9F;
+}
 .proj-txtx span {
   font-style: italic;
   font-weight: 100;
@@ -559,6 +598,100 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .project p {
     font-size: 16px;
     width: 100%;
+  }
+  .project .nav.nav-pills,
+  .nav-pills {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .project .nav.nav-pills,
+  .nav-pills {
+    width: 100%;
+  }
+}
+
+/************ Testemony Css ************/
+
+.testemony {
+  padding: 2rem 0 4rem 0;
+  position: relative;
+  background-color: black;
+}
+.testemony-bx {
+  background: #151515;
+  opacity: 80%;
+  border-radius: 64px;
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 4rem;
+}
+.testemony h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.testemony h5 {
+  font-size: 16px;
+  color: #b8b8b8;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 1.5rem 0 2rem 0;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.testemony h6 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #dbd9d9;
+  letter-spacing: 0.8px;
+  margin: 0.3rem 1rem;
+  max-width: 800px;
+}
+.testemony p {
+    color: #B8B8B8;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 1rem 1rem 3rem 1rem;
+}
+.testemony-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.testemony-slider .item {
+  position: relative;
+}
+.testemony-slider .item img {
+  -webkit-filter: grayscale(800%);
+  width: 60%;
+  margin: -18rem auto 5rem auto;
+}
+.testemony-slider .item {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .testemony-slider .item img {
+    -webkit-filter: grayscale(800%);
+    width: 60%;
+    margin: -14.8rem auto 5rem auto;
+  }
+  .testemony h5 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .testemony-slider .item img{
+    margin: -11.2rem auto 5rem;
+  }  
+  .testemony{
+    padding: 0.2rem 0.4rem;
   }
 }
 
@@ -653,6 +786,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .contact .form-group p {
     text-align: center;
     margin-top: 0.75rem; 
+  }
+}
+
+@media (max-width: 650px) {
+  .contact{
+    padding: 0 0;
   }
 }
 
